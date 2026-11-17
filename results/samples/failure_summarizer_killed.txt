@@ -1,0 +1,12 @@
+[08:07:49.764] [parent     pid=1473] attempt 0: starting pipeline (resume after line 0)
+[08:07:49.764] [parent     pid=1473] forked reader     pid=1474 (parent pid=1473)
+[08:07:49.765] [parent     pid=1473] forked filter     pid=1475 (parent pid=1473)
+[08:07:49.765] [parent     pid=1473] forked summarizer pid=1476 (parent pid=1473)
+[08:07:49.765] [summarizer pid=1476] INJECTED FAULT after 100 frames
+[08:07:49.765] [parent     pid=1473] reaped  summarizer pid=1476: killed by signal 9 (Killed)  <-- FAILURE
+[08:07:49.766] [filter     pid=1475] write to downstream failed: Broken pipe (downstream stage is gone)
+[08:07:49.766] [parent     pid=1473] reaped  filter     pid=1475: exited with code 4  <-- FAILURE
+[08:07:49.766] [reader     pid=1474] write to downstream failed: Broken pipe (downstream stage is gone)
+[08:07:49.766] [parent     pid=1473] reaped  reader     pid=1474: exited with code 4  <-- FAILURE
+[08:07:49.766] [parent     pid=1473] RESULT FAILED attempts=1 elapsed=0.003s
+rc=1

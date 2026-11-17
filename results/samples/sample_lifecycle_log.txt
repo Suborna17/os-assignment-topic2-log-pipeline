@@ -1,0 +1,11 @@
+[08:07:49.689] [parent     pid=1464] attempt 0: starting pipeline (resume after line 0)
+[08:07:49.689] [reader     pid=1465] done: 40 lines scanned, 40 frames sent (3 malformed)
+[08:07:49.689] [parent     pid=1464] forked reader     pid=1465 (parent pid=1464)
+[08:07:49.690] [parent     pid=1464] forked filter     pid=1466 (parent pid=1464)
+[08:07:49.690] [parent     pid=1464] forked summarizer pid=1467 (parent pid=1464)
+[08:07:49.690] [parent     pid=1464] reaped  reader     pid=1465: exited with code 0
+[08:07:49.690] [filter     pid=1466] done: 40 frames in, 10 forwarded, 30 removed
+[08:07:49.690] [summarizer pid=1467] done: 40 lines accounted for (7 kept, 30 filtered, 3 malformed, 0 duplicates ignored)
+[08:07:49.690] [parent     pid=1464] reaped  filter     pid=1466: exited with code 0
+[08:07:49.690] [parent     pid=1464] reaped  summarizer pid=1467: exited with code 0
+[08:07:49.690] [parent     pid=1464] RESULT OK attempts=1 elapsed=0.001s

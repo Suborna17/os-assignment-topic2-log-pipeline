@@ -1,0 +1,3 @@
+1,000,000 lines, -l DEBUG (every record crosses both pipes); median of 7 runs; rusage of process + waited children
+single    user=0.185s  sys=0.004s  voluntary_cs=1  involuntary_cs=8
+pipeline  user=0.925s  sys=0.037s  voluntary_cs=2773  involuntary_cs=762

@@ -1,0 +1,65 @@
+
+== Normal cases
+  [PASS] N1 pipeline matches hand-computed report (sample.log)
+  [PASS] N2 single-process matches hand-computed report
+  [PASS] N3 pipeline == single-process (200k lines, 2% malformed)
+  [PASS] N4 pipeline == independent Python oracle
+
+== Malformed log entries
+  [PASS] M1 pipeline exits 0 on malformed input
+  [PASS] M2 pipeline report == oracle
+  [PASS] M3 single-process report == oracle
+  [PASS] M4 exactly 12 malformed lines counted
+  [PASS] M5 5 valid lines, 4 kept, 1 filtered
+  [PASS] M6 total lines scanned = 17 (nothing lost)
+
+== Boundary cases
+  [PASS] B1 empty file: exit 0
+  [PASS] B2 empty file: report == oracle
+  [PASS] B3 single-line file == oracle
+  [PASS] B4 file with only malformed lines == oracle
+  [PASS] B5 min-level DEBUG: pipeline == oracle
+  [PASS] B5 min-level INFO: pipeline == oracle
+  [PASS] B5 min-level WARN: pipeline == oracle
+  [PASS] B5 min-level ERROR: pipeline == oracle
+  [PASS] B5 min-level FATAL: pipeline == oracle
+  [PASS] B6 missing input file: exit code 2, clear message
+  [PASS] B7 invalid level rejected (non-zero exit)
+  [PASS] B8 -o writes report file atomically (no .tmp left)
+
+== Failure scenarios (must terminate, must not print a wrong report)
+  [PASS] F  reader:kill:30000: exits 1 (not hang: 0s, rc=1)
+  [PASS] F  reader:kill:30000: no partial report on stdout
+  [PASS] F  filter:kill:30000: exits 1 (not hang: 0s, rc=1)
+  [PASS] F  filter:kill:30000: no partial report on stdout
+  [PASS] F  summarizer:kill:30000: exits 1 (not hang: 0s, rc=1)
+  [PASS] F  summarizer:kill:30000: no partial report on stdout
+  [PASS] F  reader:exit:30000: exits 1 (not hang: 0s, rc=1)
+  [PASS] F  reader:exit:30000: no partial report on stdout
+  [PASS] F  filter:exit:30000: exits 1 (not hang: 0s, rc=1)
+  [PASS] F  filter:exit:30000: no partial report on stdout
+  [PASS] F  summarizer:exit:30000: exits 1 (not hang: 0s, rc=1)
+  [PASS] F  summarizer:exit:30000: no partial report on stdout
+  [PASS] F7 broken pipe: upstream stages detect EPIPE and exit 4
+  [PASS] F8 killed reader: filter reports truncated stream
+  [PASS] F9 hung stage: watchdog kills pipeline after 2s (took 2s)
+  [PASS] F10 corrupt checkpoint: fails cleanly (rc=1), no hang
+
+== Restart challenge: no lost / duplicated records
+  [PASS] R  reader killed mid-run, restarted: exit 0
+  [PASS] R  reader restart: report identical to single-process
+  [PASS] R  reader restart: RESULT shows 2 attempts
+  [PASS] R  reader restart: checkpoint removed after success
+  [PASS] R  filter killed mid-run, restarted: exit 0
+  [PASS] R  filter restart: report identical to single-process
+  [PASS] R  filter restart: RESULT shows 2 attempts
+  [PASS] R  filter restart: checkpoint removed after success
+  [PASS] R  summarizer killed mid-run, restarted: exit 0
+  [PASS] R  summarizer restart: report identical to single-process
+  [PASS] R  summarizer restart: RESULT shows 2 attempts
+  [PASS] R  summarizer restart: checkpoint removed after success
+        evidence: [08:06:48.421] [summarizer pid=1038] resumed from checkpoint at line 111786 (111786 records)
+  [PASS] R4 fault on every attempt: gives up after max restarts (rc=1)
+  [PASS] R5 --max-restarts without --checkpoint is rejected
+
+RESULT: 52 passed, 0 failed

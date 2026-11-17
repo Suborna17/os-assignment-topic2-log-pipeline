@@ -1,0 +1,26 @@
+Date            : 2026-11-15T08:07:01Z
+CPU             : Intel(R) Xeon(R) Processor @ 2.10GHz
+Logical CPUs    : 1  (nproc=1)
+Memory          : 3992 MB
+Kernel          : 6.18.44-fc-v470
+OS              : Ubuntu 24.04.5 LTS
+Compiler        : gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Compile flags   : -O2 -Wall -Wextra -Wpedantic -std=gnu11
+Pipe capacity   : 1048576 bytes max (default pipe buffer 65536)
+Input data      : synthetic, 2.0% malformed lines, seed 42
+    10000 lines WARN  single   wall median 0.003s (min 0.003, max 0.003)  cpu 0.002s
+    10000 lines WARN  pipeline wall median 0.007s (min 0.007, max 0.009)  cpu 0.007s
+    10000 lines DEBUG single   wall median 0.003s (min 0.003, max 0.003)  cpu 0.003s
+    10000 lines DEBUG pipeline wall median 0.009s (min 0.009, max 0.017)  cpu 0.009s
+   100000 lines WARN  single   wall median 0.017s (min 0.017, max 0.030)  cpu 0.017s
+   100000 lines WARN  pipeline wall median 0.059s (min 0.053, max 0.090)  cpu 0.055s
+   100000 lines DEBUG single   wall median 0.028s (min 0.022, max 0.033)  cpu 0.028s
+   100000 lines DEBUG pipeline wall median 0.078s (min 0.077, max 0.093)  cpu 0.078s
+  1000000 lines WARN  single   wall median 0.180s (min 0.165, max 0.292)  cpu 0.179s
+  1000000 lines WARN  pipeline wall median 0.672s (min 0.522, max 0.849)  cpu 0.666s
+  1000000 lines DEBUG single   wall median 0.186s (min 0.185, max 0.191)  cpu 0.186s
+  1000000 lines DEBUG pipeline wall median 0.809s (min 0.753, max 0.985)  cpu 0.804s
+  3000000 lines WARN  single   wall median 0.634s (min 0.508, max 0.653)  cpu 0.630s
+  3000000 lines WARN  pipeline wall median 1.760s (min 1.639, max 1.883)  cpu 1.749s
+  3000000 lines DEBUG single   wall median 0.730s (min 0.647, max 0.857)  cpu 0.728s
+  3000000 lines DEBUG pipeline wall median 2.587s (min 2.426, max 3.176)  cpu 2.573s

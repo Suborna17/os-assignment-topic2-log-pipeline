@@ -1,0 +1,40 @@
+2026-01-01 00:00:02 DEBUG entering handler
+2026-01-01 00:00:03 DEBUG entering handler
+2026-01-01 00:00:03 INFO session created
+2026-01-01 00:00:06 INFO session created
+2026-01-01 00:00:07 DEBUG query plan selected
+2026-01-01 00:00:07 INFO config reloaded
+2026-01-01 00:00:08 DEBUG heartbeat tick
+2026-01-01 00:00:10 DEBUG
+garbage ### 819103175
+2026-01-01 00:00:16 INFO user login ok
+garbage ### 137918530
+2026-01-01 00:00:17 INFO request completed
+2026-01-01 00:00:18 DEBUG cache lookup miss
+2026-01-01 00:00:21 INFO session created
+2026-01-01 00:00:24 WARN deprecated API call
+2026-01-01 00:00:27 INFO config reloaded
+2026-01-01 00:00:28 DEBUG query plan selected
+2026-01-01 00:00:30 INFO job scheduled
+2026-01-01 00:00:31 ERROR database connection timeout
+2026-01-01 00:00:31 DEBUG cache lookup miss
+2026-01-01 00:00:31 DEBUG cache lookup miss
+2026-01-01 00:00:31 INFO config reloaded
+2026-01-01 00:00:32 DEBUG entering handler
+2026-01-01 00:00:34 WARN disk usage above 80%
+2026-01-01 00:00:37 INFO session created
+2026-01-01 00:00:40 ERROR upstream service returned 503
+2026-01-01 00:00:42 INFO user login ok
+2026-01-01 00:00:42 INFO config reloaded
+2026-01-01 00:00:42 INFO request completed
+2026-01-01 00:00:42 ERROR upstream service returned 503
+2026-01-01 00:00:45 INFO config reloaded
+2026-01-01 00:00:47 ERROR upstream service returned 503
+2026-01-01 00:00:47 INFO user login ok
+2026-01-01 00:00:48 INFO user login ok
+2026-01-01 00:00:50 INFO user login ok
+2026-01-01 00:00:52 INFO user login ok
+2026-01-01 00:00:52 INFO user login ok
+2026-01-01 00:00:54 DEBUG cache lookup miss
+2026-01-01 00:00:57 INFO config reloaded
+2026-01-01 00:00:58 WARN disk usage above 80%

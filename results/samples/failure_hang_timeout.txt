@@ -1,0 +1,12 @@
+[08:07:49.797] [parent     pid=1481] attempt 0: starting pipeline (resume after line 0)
+[08:07:49.797] [parent     pid=1481] forked reader     pid=1482 (parent pid=1481)
+[08:07:49.797] [parent     pid=1481] forked filter     pid=1483 (parent pid=1481)
+[08:07:49.797] [parent     pid=1481] forked summarizer pid=1484 (parent pid=1481)
+[08:07:49.798] [filter     pid=1483] INJECTED FAULT after 1000 frames
+[08:07:51.797] [parent     pid=1481] TIMEOUT exceeded: killing remaining pipeline stages
+[08:07:51.797] [summarizer pid=1484] upstream closed the pipe without an end marker (filter died?)
+[08:07:51.797] [parent     pid=1481] reaped  summarizer pid=1484: exited with code 3  <-- FAILURE
+[08:07:51.797] [parent     pid=1481] reaped  reader     pid=1482: killed by signal 9 (Killed)  <-- FAILURE
+[08:07:51.797] [parent     pid=1481] reaped  filter     pid=1483: killed by signal 9 (Killed)  <-- FAILURE
+[08:07:51.797] [parent     pid=1481] RESULT FAILED attempts=1 elapsed=2.001s
+rc=1

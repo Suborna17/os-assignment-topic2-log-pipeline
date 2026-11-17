@@ -1,0 +1,10 @@
+Date            : 2026-11-15T08:07:01Z
+CPU             : Intel(R) Xeon(R) Processor @ 2.10GHz
+Logical CPUs    : 1  (nproc=1)
+Memory          : 3992 MB
+Kernel          : 6.18.44-fc-v470
+OS              : Ubuntu 24.04.5 LTS
+Compiler        : gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+Compile flags   : -O2 -Wall -Wextra -Wpedantic -std=gnu11
+Pipe capacity   : 1048576 bytes max (default pipe buffer 65536)
+Input data      : synthetic, 2.0% malformed lines, seed 42

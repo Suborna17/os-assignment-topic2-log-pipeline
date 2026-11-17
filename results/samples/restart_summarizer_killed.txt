@@ -1,0 +1,24 @@
+[08:07:51.798] [parent     pid=1485] attempt 0: starting pipeline (resume after line 0)
+[08:07:51.798] [parent     pid=1485] forked reader     pid=1486 (parent pid=1485)
+[08:07:51.799] [parent     pid=1485] forked filter     pid=1487 (parent pid=1485)
+[08:07:51.799] [parent     pid=1485] forked summarizer pid=1488 (parent pid=1485)
+[08:07:51.915] [summarizer pid=1488] INJECTED FAULT after 30001 frames
+[08:07:51.915] [parent     pid=1485] reaped  summarizer pid=1488: killed by signal 9 (Killed)  <-- FAILURE
+[08:07:51.916] [filter     pid=1487] write to downstream failed: Broken pipe (downstream stage is gone)
+[08:07:51.916] [parent     pid=1485] reaped  filter     pid=1487: exited with code 4  <-- FAILURE
+[08:07:51.916] [reader     pid=1486] write to downstream failed: Broken pipe (downstream stage is gone)
+[08:07:51.916] [parent     pid=1485] reaped  reader     pid=1486: exited with code 4  <-- FAILURE
+[08:07:51.916] [parent     pid=1485] restarting pipeline (attempt 1 of 2)
+[08:07:51.916] [parent     pid=1485] attempt 1: starting pipeline (resume after line 111786)
+[08:07:51.916] [parent     pid=1485] forked reader     pid=1489 (parent pid=1485)
+[08:07:51.916] [parent     pid=1485] forked filter     pid=1490 (parent pid=1485)
+[08:07:51.916] [parent     pid=1485] forked summarizer pid=1491 (parent pid=1485)
+[08:07:51.917] [summarizer pid=1491] resumed from checkpoint at line 111786 (111786 records)
+[08:07:52.006] [reader     pid=1489] done: 200000 lines scanned, 88214 frames sent (1759 malformed)
+[08:07:52.006] [filter     pid=1490] done: 88214 frames in, 23474 forwarded, 64740 removed
+[08:07:52.007] [parent     pid=1485] reaped  reader     pid=1489: exited with code 0
+[08:07:52.007] [parent     pid=1485] reaped  filter     pid=1490: exited with code 0
+[08:07:52.008] [summarizer pid=1491] done: 200000 lines accounted for (48963 kept, 147000 filtered, 4037 malformed, 0 duplicates ignored)
+[08:07:52.008] [parent     pid=1485] reaped  summarizer pid=1491: exited with code 0
+[08:07:52.008] [parent     pid=1485] RESULT OK attempts=2 elapsed=0.210s
+rc=0

@@ -1,0 +1,19 @@
+=== Log Summary Report ===
+Lines scanned          : 40
+  well-formed          : 37
+  malformed            : 3
+Filter                 : severity >= WARN
+  kept                 : 7
+  filtered out         : 30
+Time range (kept, UTC) : 2026-01-01 00:00:24 .. 2026-01-01 00:00:58
+Kept events by severity:
+  DEBUG  0
+  INFO   0
+  WARN   3
+  ERROR  4
+  FATAL  0
+Top event messages (kept):
+  1. 3  upstream service returned 503
+  2. 2  disk usage above 80%
+  3. 1  database connection timeout
+  4. 1  deprecated API call

@@ -1,0 +1,20 @@
+=== Log Summary Report ===
+Lines scanned          : 200000
+  well-formed          : 195963
+  malformed            : 4037
+Filter                 : severity >= WARN
+  kept                 : 48963
+  filtered out         : 147000
+Time range (kept, UTC) : 2026-01-01 00:00:03 .. 2026-01-04 11:25:44
+Kept events by severity:
+  DEBUG  0
+  INFO   0
+  WARN   23574
+  ERROR  21463
+  FATAL  3926
+Top event messages (kept):
+  1. 5971  retrying request
+  2. 5925  disk usage above 80%
+  3. 5856  deprecated API call
+  4. 5822  slow query detected
+  5. 3645  payment gateway unreachable

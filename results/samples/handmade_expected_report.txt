@@ -1,0 +1,20 @@
+=== Log Summary Report ===
+Lines scanned          : 15
+  well-formed          : 15
+  malformed            : 0
+Filter                 : severity >= WARN
+  kept                 : 9
+  filtered out         : 6
+Time range (kept, UTC) : 2026-03-01 08:01:10 .. 2026-03-01 08:11:00
+Kept events by severity:
+  DEBUG  0
+  INFO   0
+  WARN   3
+  ERROR  5
+  FATAL  1
+Top event messages (kept):
+  1. 3  database connection timeout
+  2. 2  disk usage above 80%
+  3. 2  failed to write file
+  4. 1  out of memory
+  5. 1  slow query detected

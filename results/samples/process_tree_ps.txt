@@ -1,0 +1,5 @@
+  PID  PPID STAT ELAPSED COMMAND         COMMAND
+ 1502     1 S          0 logpipe         ./bin/logpipe -q /tmp/logbench/log_3000000.log
+ 1503  1502 R          0  \_ logpipe      \_ ./bin/logpipe -q /tmp/logbench/log_3000000.log
+ 1505  1502 R          0  \_ logpipe      \_ ./bin/logpipe -q /tmp/logbench/log_3000000.log
+ 1506  1502 S          0  \_ logpipe      \_ ./bin/logpipe -q /tmp/logbench/log_3000000.log
